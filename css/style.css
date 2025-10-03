@@ -1,0 +1,160 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0d1117; color: #f0f6fc; font-family: Arial, sans-serif; text-align: center; }
+
+    h1 { margin: 20px; font-size: 2.5rem; color: #58a6ff; }
+
+ .pantalla { 
+  display: none; 
+  padding: 20px; 
+  min-height: 100vh; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  transform: translateY(-11%); 
+}
+    .activa { display: flex; }
+
+    /* Pantalla inicial */
+    #pantalla-inicio input {
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      border: 2px solid #58a6ff;
+      outline: none;
+      margin-top: 20px;
+      width: 60%;
+      max-width: 300px;
+      text-align: center;
+    }
+    #pantalla-inicio button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      background: #238636;
+      color: white;
+      cursor: pointer;
+    }
+    #pantalla-inicio button:hover { background: #2ea043; }
+    .pantalla button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background: #58a6ff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+  }    
+
+.pantalla button:hover {
+  background: #1f6feb;
+}
+
+    /* Contenedor de juego (móvil/tablet) */
+#contenedor-juego {
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  height: 70vh;
+  max-height: 400px;
+  margin: 10px auto;
+  border: 2px solid #58a6ff;
+  background: #161b22;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(88,166,255,0.5);
+}
+
+/* En PC (pantallas grandes)más alto */
+@media (min-width: 1030px) {
+  #contenedor-juego {
+    height: 600px;   
+    max-height: none;
+  }
+}
+    .riel { position: absolute; width: 25%; height: 100%; top: 0; background: rgba(255,255,255,0.03); border-left: 1px solid #30363d; border-right: 1px solid #30363d; }
+    .riel:nth-child(1) { left: 0%; }
+    .riel:nth-child(2) { left: 25%; }
+    .riel:nth-child(3) { left: 50%; }
+    .riel:nth-child(4) { left: 75%; }
+
+    .nota { position: absolute; width: 25%; height: 30px; background: #58a6ff; border-radius: 5px; }
+
+    .zona-golpe { position: absolute; bottom: 80px; width: 100%; height: 40px; background: rgba(88,166,255,0.1); border-top: 3px solid #58a6ff; border-bottom: 3px solid #58a6ff; }
+
+    .teclas { position: absolute; bottom: 0; width: 100%; height: 60px; display: flex; padding: 5px; }
+    .tecla {
+      flex: 1;
+      font-size: 1.5rem;
+      background: #0d1117;
+      border: 2px solid #58a6ff;
+      color: #58a6ff;
+      border-radius: 10px;
+      margin: 0 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .tecla:active {
+      background: #238636;
+      color: white;
+    }
+
+    #lista-artistas button.activo {
+      background: #58a6ff;
+      color: #0d1117;
+      font-weight: bold;
+    }
+    #barra-vida { width: 200px; height: 20px; background: #f85149; margin: 10px auto; border-radius: 5px; overflow: hidden; }
+    #relleno-vida { height: 100%; background: #2ea043; width: 100%; }
+
+    #fin-juego { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); color: white; font-size: 2rem; justify-content: center; align-items: center; flex-direction: column; z-index: 10; }
+    #fin-juego button { margin-top: 20px; padding: 10px 20px; font-size: 1rem; cursor: pointer; border-radius: 8px; border: none; background: #58a6ff; color: white; }
+
+    /* Parte artistas y canciones */
+    .contenedor-artista-cancion {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    #lista-artistas, #lista-canciones {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 15px rgba(88,166,255,0.2);
+      min-width: 200px;
+    }
+
+    #lista-artistas button, #lista-canciones button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #58a6ff;
+      background: #0d1117;
+      color: #f0f6fc;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    #lista-artistas button:hover, #lista-canciones button:hover {
+      background: #21262d;
+      transform: scale(1.05);
+    }
+
+    #lista-canciones .placeholder {
+      color: #8b949e;
+      font-style: italic;
+    }
+    #pantalla-juego #puntos,
+    #pantalla-juego #vida {
+      margin-top: 60px; 
+    }
