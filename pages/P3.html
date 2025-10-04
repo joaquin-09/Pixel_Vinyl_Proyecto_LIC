@@ -5,145 +5,7 @@
   <title>Mundos</title>
   <link rel="stylesheet" href="../css/font.css">
   <link rel="stylesheet" href="../css/style_P3.css">
-
-  <style>
-    /* === CONFIGURACIÓN BASE === */
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      background: radial-gradient(circle at center, #141414 0%, #000 100%);
-      background-image: url("../img/pixel.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-blend-mode: overlay;
-
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
-    }
-
-    body.visible {
-      opacity: 1;
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: -1;
-    }
-
-    /* === TÍTULO === */
-    .titulo {
-      font-family: 'Detalpalo', sans-serif;
-      font-size: 3.2rem;
-      text-align: center;
-      color: #ebe0e3;
-      text-shadow: 0 0 10px #3b3033, 0 0 25px #ff6b81;
-      letter-spacing: 3px;
-      margin-bottom: 70px;
-      text-transform: uppercase;
-      animation: brillo 2s infinite ease-in-out;
-    }
-
-    @keyframes brillo {
-      0%, 100% { text-shadow: 0 0 10px #ff2e63, 0 0 25px #ff6b81; }
-      50% { text-shadow: 0 0 20px #ff7b9a, 0 0 40px #ffc0cb; }
-    }
-
-    /* === MAPA === */
-    .mapa {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 120px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .columna {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-
-    .alto .posicion { transform: translateY(-80px); }
-    .bajo .posicion { transform: translateY(80px); }
-
-    /* === MUNDOS === */
-    .mundo {
-      width: 130px;
-      height: 130px;
-      background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
-      border-radius: 18px;
-      box-shadow: 0 0 12px rgba(255,255,255,0.15), inset 0 0 8px rgba(255,255,255,0.05);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .mundo:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 15px #dfe4e4, 0 0 35px #00fff299;
-    }
-
-    .mundo img {
-      width: 90px;
-      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
-      transition: transform 0.3s, filter 0.3s;
-    }
-
-    .mundo img:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 10px #d7e5e4);
-    }
-
-    /* === NÚMEROS === */
-    .num {
-      display: block;
-      text-align: center;
-      margin-top: 15px;
-      font-size: 1.2rem;
-      color: #fff;
-      font-family: 'Kubics_Rube', sans-serif;
-      text-shadow: 0 0 6px #00fff2, 0 0 20px #00fff288;
-    }
-
-    /* === MUNDO ACTIVO === */
-    .activo {
-      background: linear-gradient(145deg, #ffd000, #ff9c00);
-      box-shadow: 0 0 25px #ffd633, 0 0 45px #ffea33aa;
-      transform: scale(1.05);
-    }
-
-    /* === CONEXIONES SVG === */
-    .conexiones {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .linea {
-      stroke: #00fff2;
-      stroke-width: 3;
-      filter: drop-shadow(0 0 6px #00fff2);
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -156,7 +18,7 @@
       <div class="posicion">
         <div class="mundo activo" id="m1">
           <a href="ventana-mundo1.html">
-            <img src="imagenes/vinilo.png" alt="Mundo 1">
+            <img src="" alt="Mundo 1">
           </a>
         </div>
         <span class="num">1</span>
@@ -167,7 +29,7 @@
       <div class="posicion">
         <div class="mundo" id="m2">
           <a href="ventana-mundo2.html">
-            <img src="imagenes/vinilo.png" alt="Mundo 2">
+            <img src="" alt="Mundo 2">
           </a>
         </div>
         <span class="num">2</span>
@@ -178,7 +40,7 @@
       <div class="posicion">
         <div class="mundo" id="m3">
           <a href="ventana-mundo3.html">
-            <img src="imagenes/vinilo.png" alt="Mundo 3">
+            <img src="" alt="Mundo 3">
           </a>
         </div>
         <span class="num">3</span>
@@ -189,7 +51,7 @@
       <div class="posicion">
         <div class="mundo" id="m4">
           <a href="ventana-mundo4.html">
-            <img src="imagenes/vinilo.png" alt="Mundo 4">
+            <img src="" alt="Mundo 4">
           </a>
         </div>
         <span class="num">4</span>
@@ -200,52 +62,13 @@
       <div class="posicion">
         <div class="mundo" id="m5">
           <a href="ventana-mundo5.html">
-            <img src="imagenes/vinilo.png" alt="Mundo 5">
+            <img src="" alt="Mundo 5">
           </a>
         </div>
         <span class="num">5</span>
       </div>
     </div>
   </div>
-
-  <script>
-    const conexiones = [
-      ["m1", "m2"],
-      ["m2", "m3"],
-      ["m3", "m4"],
-      ["m4", "m5"]
-    ];
-
-    function dibujarConexiones() {
-      const svg = document.getElementById("svgConexiones");
-      const mapa = document.getElementById("mapa");
-      const rect = mapa.getBoundingClientRect();
-      svg.innerHTML = "";
-
-      conexiones.forEach(([id1, id2]) => {
-        const e1 = document.getElementById(id1).getBoundingClientRect();
-        const e2 = document.getElementById(id2).getBoundingClientRect();
-        const x1 = e1.left + e1.width / 2 - rect.left;
-        const y1 = e1.top + e1.height / 2 - rect.top;
-        const x2 = e2.left + e2.width / 2 - rect.left;
-        const y2 = e2.top + e2.height / 2 - rect.top;
-
-        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("x1", x1);
-        line.setAttribute("y1", y1);
-        line.setAttribute("x2", x2);
-        line.setAttribute("y2", y2);
-        line.setAttribute("class", "linea");
-        svg.appendChild(line);
-      });
-    }
-
-    window.onload = () => {
-      setTimeout(() => document.body.classList.add("visible"), 200);
-      dibujarConexiones();
-    };
-
-    window.onresize = dibujarConexiones;
-  </script>
+  <script src="../js/P3.js"></script>
 </body>
 </html>

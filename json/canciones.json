@@ -1,33 +1,149 @@
 {
-  "Mundo 1": {
-    "Ambient": [
-      {
-        "titulo": "Counting Stars",
-        "artista": "Nujabes",
-        "album": "Modal Soul",
-        "anio": 2005,
-        "duracion": "4:20",
-        "genero": "Lo-fi / Hip-Hop Instrumental",
-        "enlace": "https://www.youtube.com/watch?v=example1"
-      },
-      {
-        "titulo": "Independent Accident",
-        "artista": "C418",
-        "album": "Life Changing Moments Seem Minor in Pictures",
-        "anio": 2002,
-        "duracion": "3:45",
-        "genero": "Ambient / Electronic",
-        "enlace": "https://www.youtube.com/watch?v=example2"
-      },
-      {
-        "titulo": "Heart to Heart",
-        "artista": "Mac DeMarco",
-        "album": "This Old Dog",
-        "anio": 2017,
-        "duracion": "4:18",
-        "genero": "Indie Rock / Soft Rock",
-        "enlace": "https://www.youtube.com/watch?v=example3"
-      }
-    ]
+  "Mundos": {
+    "Mundo 1": {
+      "Genero": "Ambient",
+      "Canciones": [
+        {
+          "Artista": "Nujabes",
+          "Titulo": "Counting Stars",
+          "Album": "Modal Soul",
+          "Año": 2005,
+          "Duracion": "3:53",
+          "Link": "https://www.youtube.com/watch?v=9Yv5pEyUu4g"
+        },
+        {
+          "Artista": "C418",
+          "Titulo": "Independent Accident",
+          "Album": "Minecraft Volume Beta",
+          "Año": 2013,
+          "Duracion": "2:43",
+          "Link": "https://www.youtube.com/watch?v=H3vT9Vd9IB0"
+        },
+        {
+          "Artista": "Mac DeMarco",
+          "Titulo": "Heart to Heart",
+          "Album": "This Old Dog",
+          "Año": 2017,
+          "Duracion": "3:22",
+          "Link": "https://www.youtube.com/watch?v=ZhTtC9fQX68"
+        }
+      ]
+    },
+    "Mundo 2": {
+      "Genero": "Indie",
+      "Canciones": [
+        {
+          "Artista": "Last Dinosaurs",
+          "Titulo": "Zoom",
+          "Album": "In A Million Years",
+          "Año": 2012,
+          "Duracion": "4:01",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        },
+        {
+          "Artista": "Goodkid",
+          "Titulo": "Summer",
+          "Album": "EP Summer",
+          "Año": 2016,
+          "Duracion": "3:45",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        },
+        {
+          "Artista": "Molinette Cinema",
+          "Titulo": "Ansiedad",
+          "Album": "EP Ansiedad",
+          "Año": 2019,
+          "Duracion": "3:30",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        }
+      ]
+    },
+    "Mundo 3": {
+      "Genero": "Rock",
+      "Canciones": [
+        {
+          "Artista": "Red Hot Chili Peppers",
+          "Titulo": "Dark Necessities",
+          "Album": "The Getaway",
+          "Año": 2016,
+          "Duracion": "4:02",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        },
+        {
+          "Artista": "Incubus",
+          "Titulo": "Dig",
+          "Album": "Light Grenades",
+          "Año": 2006,
+          "Duracion": "3:57",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        },
+        {
+          "Artista": "Breaking Benjamin",
+          "Titulo": "So Cold",
+          "Album": "We Are Not Alone",
+          "Año": 2004,
+          "Duracion": "3:35",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        }
+      ]
+    },
+    "Mundo 4": {
+      "Genero": "R&B",
+      "Canciones": [
+        {
+          "Artista": "Justin Timberlake",
+          "Titulo": "Rock Your Body",
+          "Album": "Justified",
+          "Año": 2002,
+          "Duracion": "4:27",
+          "Link": "https://www.youtube.com/watch?v=TSVHoHyErBQ"
+        },
+        {
+          "Artista": "Rihanna",
+          "Titulo": "Umbrella",
+          "Album": "Good Girl Gone Bad",
+          "Año": 2007,
+          "Duracion": "4:36",
+          "Link": "https://www.youtube.com/watch?v=CvBfHwUxHIk"
+        },
+        {
+          "Artista": "The Weeknd",
+          "Titulo": "Starboy",
+          "Album": "Starboy",
+          "Año": 2016,
+          "Duracion": "3:50",
+          "Link": "https://www.youtube.com/watch?v=34Na4j8AVgA"
+        }
+      ]
+    },
+    "Mundo 5": {
+      "Genero": "EDM",
+      "Canciones": [
+        {
+          "Artista": "Daft Punk",
+          "Titulo": "Digital Love",
+          "Album": "Discovery",
+          "Año": 2001,
+          "Duracion": "4:58",
+          "Link": "https://www.youtube.com/watch?v=FxzG1_9VwHQ"
+        },
+        {
+          "Artista": "Madeon",
+          "Titulo": "Finale",
+          "Album": "Finale Single",
+          "Año": 2012,
+          "Duracion": "3:39",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        },
+        {
+          "Artista": "Porter Robinson",
+          "Titulo": "Get Your Wish (Anamanaguchi Remix)",
+          "Album": "Nurture Remixes",
+          "Año": 2021,
+          "Duracion": "3:55",
+          "Link": "https://www.youtube.com/watch?v=XYZ"
+        }
+      ]
+    }
   }
 }
