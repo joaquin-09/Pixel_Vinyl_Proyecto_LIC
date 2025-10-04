@@ -1,0 +1,33 @@
+{
+  "Mundo 1": {
+    "Ambient": [
+      {
+        "titulo": "Counting Stars",
+        "artista": "Nujabes",
+        "album": "Modal Soul",
+        "anio": 2005,
+        "duracion": "4:20",
+        "genero": "Lo-fi / Hip-Hop Instrumental",
+        "enlace": "https://www.youtube.com/watch?v=example1"
+      },
+      {
+        "titulo": "Independent Accident",
+        "artista": "C418",
+        "album": "Life Changing Moments Seem Minor in Pictures",
+        "anio": 2002,
+        "duracion": "3:45",
+        "genero": "Ambient / Electronic",
+        "enlace": "https://www.youtube.com/watch?v=example2"
+      },
+      {
+        "titulo": "Heart to Heart",
+        "artista": "Mac DeMarco",
+        "album": "This Old Dog",
+        "anio": 2017,
+        "duracion": "4:18",
+        "genero": "Indie Rock / Soft Rock",
+        "enlace": "https://www.youtube.com/watch?v=example3"
+      }
+    ]
+  }
+}
