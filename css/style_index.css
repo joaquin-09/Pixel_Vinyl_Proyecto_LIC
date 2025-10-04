@@ -1,0 +1,109 @@
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      background-color: black;
+    }
+    /* esto es para darle un fondo negro a la salida */
+    body.transicion  {
+    transition: background-color 0.5s ease;
+    background-color: black !important;
+    }
+
+
+    /* Pantalla de carga */
+    #pantalla-carga {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      z-index: 1000;
+      transition: opacity 1s ease;
+      flex-direction: column;
+    }
+
+    #texto-carga {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 20px;
+      font-family: "detalpalo", sans-serif;
+      color: #c8d4d7;
+      text-shadow: 0 0 10px #00c3ff;
+    }
+
+    /* Fondo del menú */
+    body.fondo {
+      background: url('../img/pixel.png') no-repeat center center fixed;
+      background-size: cover;
+      filter: grayscale(90%);
+    }
+
+    /* Menú principal */
+    #menu {
+      display: none;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-box {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      padding: 40px 60px;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 0 25px rgba(0, 195, 255, 0.5);
+    }
+
+    /* 🔹 Título en celeste */
+    .menu-box h1 {
+      font-family: "kubics_rube", sans-serif;
+      font-size: 3.5rem;
+      color: #d0d6df;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #195061, 0 0 20px #1ba4ce;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 10px #0000ff, 0 0 20px #052a35, 0 0 40px #00c3ff;
+        opacity: 1;
+      }
+      50% {
+        text-shadow: 0 0 20px #15454a, 0 0 40px #0c1d1f, 0 0 60px #0000ff;
+        opacity: 0.7;
+      }
+    }
+
+    /* Botón estilo arcade */
+    .menu-box button {
+      background-color: #001f3f;
+      border: 2px solid #00c3ff;
+      color: #00c3ff;
+      font-family: "detalpalo", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 15px 40px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-box button:hover {
+      background-color: #00c3ff;
+      color: black;
+      box-shadow: 0 0 20px #00c3ff, 0 0 40px #00c3ff;
+    }
+  

@@ -1,7 +1,7 @@
 /* Fuente para el título retro */
 @font-face {
   font-family: "kubics_rube";
-  src: url("KubicsRube.ttf") format("truetype");
+  src: url("../tipografías/KubicsRube.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 /* Fuente para el botón y el texto de carga */
 @font-face {
   font-family: "detalpalo";
-  src: url("detalpalo.ttf") format("truetype");
+  src: url("../tipografías/detalpalo.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
