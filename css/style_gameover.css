@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  font-family: "detalpalo", sans-serif;
+}
+
+/* Transición suave al reiniciar */
+body.transicion {
+  transition: background-color 0.5s ease;
+  background-color: black !important;
+}
+
+/* Fondo pixelado con tono gris oscuro */
+body.fondo {
+  background: url('../img/pixel.png') no-repeat center center fixed;
+  background-size: cover;
+  filter: grayscale(90%) brightness(0.4);
+}
+
+/* Contenedor principal centrado */
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caja principal */
+.menu-box {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  color: rgb(144, 66, 66);
+  box-shadow: 0 0 35px rgba(255, 38, 0, 0.7), inset 0 0 15px rgba(255, 38, 0, 0.4);
+  transform: scale(0.8);
+  opacity: 0;
+  animation: aparecer 1s ease-out forwards 0.3s;
+}
+
+@keyframes aparecer {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 🔹 Título GAME OVER */
+.menu-box h1 {
+  font-family: "kubics_rube", sans-serif;
+  font-size: 4.5rem;
+  color: #ff1e00;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 
+    0 0 15px #ff1e00,
+    0 0 30px #ff3c00,
+    0 0 60px #ff6b00,
+    0 0 100px #ff0000;
+  animation: pulse 1.2s infinite alternate, flicker 0.05s infinite;
+}
+
+/* Pulso incandescente rojo */
+@keyframes pulse {
+  0% { text-shadow: 0 0 15px #ff4400, 0 0 25px #ff0000; opacity: 1; }
+  50% { text-shadow: 0 0 30px #ff6b00, 0 0 60px #ff2600; opacity: 0.9; }
+  100% { text-shadow: 0 0 20px #ff1e00, 0 0 40px #c40000; opacity: 1; }
+}
+
+/* Pequeño parpadeo eléctrico */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.8; }
+}
+
+/* Botón retro */
+.menu-box button {
+  background-color: transparent;
+  border: 2px solid #ff3c00;
+  color: #ff3c00;
+  font-family: "detalpalo", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 15px 50px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.menu-box button:hover {
+  background-color: #ff3c00;
+  color: black;
+  box-shadow: 0 0 25px #ff3c00, 0 0 50px #ff3c00;
+}
+
+/* 🔹 Glitch effect */
+.glitch.active h1 {
+  position: relative;
+  animation: glitch 0.4s steps(2, end) 2;
+}
+
+.glitch.active h1::before,
+.glitch.active h1::after {
+  content: "G A M E  O V E R";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.7;
+}
+
+.glitch.active h1::before {
+  color: #ff0000;
+  clip: rect(10px, 9999px, 60px, 0);
+  animation: glitchTop 0.2s steps(2, end) 2;
+}
+
+.glitch.active h1::after {
+  color: #ff5a00;
+  clip: rect(85px, 9999px, 140px, 0);
+  animation: glitchBottom 0.2s steps(2, end) 2;
+}
+
+@keyframes glitchTop {
+  0% { transform: translate(-3px, -3px); }
+  100% { transform: translate(3px, 3px); }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translate(3px, 3px); }
+  100% { transform: translate(-3px, -3px); }
+}

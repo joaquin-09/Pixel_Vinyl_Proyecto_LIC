@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Over</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fuentes personalizadas -->
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style_gameover.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    body.transicion {
+      transition: background-color 0.5s ease;
+      background-color: black !important;
+    }
+
+    /* Fondo del menú */
+    body.fondo {
+      background: url('../img/pixelgo.png') no-repeat center center fixed;
+      background-size: cover;
+      filter: grayscale(90%);
+    }
+
+    /* Menú principal */
+    #menu {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-box {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      padding: 40px 60px;
+      border-radius: 20px;
+      text-align: center;
+      color: rgb(237, 4, 4);
+      box-shadow: 0 0 25px rgba(0, 195, 255, 0.5);
+    }
+
+    .menu-box h1 {
+      font-family: "kubics_rube", sans-serif;
+      font-size: 3.5rem;
+      color: #e01717;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #195061, 0 0 20px #ff05058b;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #052a35, 0 0 40px #00c3ff;
+        opacity: 1;
+      }
+      50% {
+        text-shadow: 0 0 20px #15454a, 0 0 40px #0c1d1f, 0 0 60px #ff0000;
+        opacity: 0.7;
+      }
+    }
+
+    .menu-box button {
+      background-color: #001f3f;
+      border: 2px solid #00c3ff;
+      color: #00c3ff;
+      font-family: "detalpalo", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 15px 40px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-box button:hover {
+      background-color: #00c3ff;
+      color: black;
+      box-shadow: 0 0 20px #00c3ff, 0 0 40px #00c3ff;
+    }
+  </style>
+</head>
+<body class="fondo">
+
+  <div id="menu">
+    <div class="menu-box">
+      <h1>G A M E&nbsp;&nbsp;O V E R</h1>
+      <button class="btn btn-lg" onclick="comenzar()">REINICIAR</button>
+    </div>
+  </div>
+
+  <script>
+    function comenzar() {
+      document.body.classList.add("transicion");
+      setTimeout(() => {
+        window.location.href = "../index.html";
+      }, 500);
+    }
+  </script>
+</body>
+</html>
