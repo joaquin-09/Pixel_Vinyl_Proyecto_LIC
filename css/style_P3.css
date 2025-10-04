@@ -1,0 +1,119 @@
+/*Estilos globales*/
+@font-face {
+  font-family: 'Detalpalo';       
+  src: url('fuentes/detalpalo.ttf') format('truetype'); /* ruta y formato */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('imagenes/fondo.png') no-repeat center center/cover;
+  color: white;
+  font-family: 'Detalpalo', sans-serif; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título arriba */
+.titulo {
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+  margin: 20px auto;
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+  width: 980px;
+  border-radius: 12px;
+  background-color: red;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Contenedor del mapa */
+.mapa {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  position: relative;
+}
+
+/* Columnas y posiciones */
+.columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100px;
+  height: 200px;
+}
+
+.posicion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Desplazamiento vertical de vinilos */
+.columna.bajo .posicion {
+  transform: translateY(150px);
+}
+
+.columna.alto .posicion {
+  transform: translateY(-100px);
+}
+
+/* Números debajo de vinilos */
+.num {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  margin-left: -15px;
+  position: relative;
+  z-index: 2; 
+}
+
+/* Vinilos */
+.mundo {
+  width: 100px;
+  height: 100px;
+  background: rgba(50, 50, 50, 0.8);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mundo img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer; 
+}
+
+.mundo.activo {
+  background: gold;
+}
+
+/* ---- NUEVO: capa SVG de conexiones ---- */
+.conexiones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* no bloquea clics */
+  z-index: 0;
+}
+
+/* Fondo negro de transición */
+body.transicion {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
